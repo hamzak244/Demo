@@ -1,0 +1,7 @@
+    # Normalize spaces and remove unwanted characters
+    text = re.sub(r'\s+', ' ', text)  # Replace multiple spaces with a single space
+    text = re.sub(r'\[.*?\]', '', text)  # Remove text in square brackets
+    text = re.sub(r'\n+', '\n', text)  # Replace multiple newlines with a single newline
+    text = re.sub(r'\r', '', text)  # Remove carriage returns
+    text = re.sub(r'\n\s*\n', '\n', text)  # Remove extra line spaces
+    
